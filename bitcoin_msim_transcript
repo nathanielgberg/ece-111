@@ -1,0 +1,128 @@
+# Reading pref.tcl
+# do ECE111_finalproejct_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash {H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash/bitcoin_hash.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:55:09 on Dec 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash" H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash/bitcoin_hash.sv 
+# -- Compiling module bitcoin_hash
+# 
+# Top level modules:
+# 	bitcoin_hash
+# End time: 00:55:12 on Dec 17,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash/tb_bitcoin_hash.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:56:34 on Dec 17,2023
+# vlog -reportprogress 300 -work work H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash/tb_bitcoin_hash.sv 
+# -- Compiling module tb_bitcoin_hash
+# 
+# Top level modules:
+# 	tb_bitcoin_hash
+# End time: 00:56:37 on Dec 17,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+vsim work.tb_bitcoin_hash
+# vsim work.tb_bitcoin_hash 
+# Start time: 00:56:53 on Dec 17,2023
+# Loading sv_std.std
+# Loading work.tb_bitcoin_hash
+# Loading work.bitcoin_hash
+run -all
+# ---------------
+# 19 WORD HEADER:
+# ---------------
+# 01234675
+# 02468cea
+# 048d19d4
+# 091a33a8
+# 12346750
+# 2468cea0
+# 48d19d40
+# 91a33a80
+# 23467501
+# 468cea02
+# 8d19d404
+# 1a33a809
+# 34675012
+# 68cea024
+# d19d4048
+# a33a8091
+# 46750123
+# 8cea0246
+# 19d4048d
+# ***************************
+# 
+# First Hash Block: fac7db3e	3d068fb2	dad9d96f	a64c008d	b26e9c91	bee63033	2a8b0899	72013e10
+# Second Hash Block For Nonce 00000000: df80ec0e	563e7000	b3ac0df5	1892fec9	e1563bb7	9868bac7	0d563a97	1
+# Second Hash Block For Nonce 00000001: 204b5d97	19116783	af88a1ba	38a482e2	46adcd28	802ccc38	615cf9b8	0
+# Second Hash Block For Nonce 00000002: b7d7237a	f922c4e3	8ab66148	b80e0335	5f8705f2	806e316a	bb007d0e	1
+# Second Hash Block For Nonce 00000003: 532c2adc	8b7e2286	8ec893db	d41629b0	af4283c6	bda08e4e	d133c545	0
+# Second Hash Block For Nonce 00000004: 97a2ebd2	006b3045	d8eb6827	2dbd656c	baf06cfa	ccf7ef24	f523fe9e	0
+# Second Hash Block For Nonce 00000005: 799f2fff	0381edd0	9eda4fe5	b563c16c	ed074dd1	2c70f50c	ae52784e	0
+# Second Hash Block For Nonce 00000006: 8a7c0b86	559b3e71	695bf559	943025c9	d928a722	0928f2b8	db77ffa0	0
+# Second Hash Block For Nonce 00000007: 51fc44df	dfc0ce99	f9384951	503f2410	33fd86a7	90ceabe6	61b4ddc7	0
+# Second Hash Block For Nonce 00000008: 745545e6	8c30cd7d	c98e3a09	80e89433	5f462e9d	48c26aad	b180b005	0
+# Second Hash Block For Nonce 00000009: 1d64fc5e	498daac6	82f6fb94	cf53d7ba	9c247b63	0f013d47	4882c050	0
+# Second Hash Block For Nonce 0000000a: 99f9a540	eeee3261	c429ac13	768dcfc1	94ce09bf	8e107691	62a7ef8d	0
+# Second Hash Block For Nonce 0000000b: 39042677	729bd1e5	a77c9dec	2aaf209b	dfe907be	19ad2575	b1082978	0
+# Second Hash Block For Nonce 0000000c: 32865be1	c7c54ed8	794b0d91	71679096	d7d6142c	fd9144a1	1ccbbf6c	0
+# Second Hash Block For Nonce 0000000d: d4d05f5a	8714b4ab	9d275b7a	7231ea5a	aca0f845	b51059ea	13b87a86	1
+# Second Hash Block For Nonce 0000000e: 77cdd337	155f8a1a	38dc171c	d5cdd481	86883ada	bc378eff	5c14492f	0
+# Second Hash Block For Nonce 0000000f: aa3b75e4	802ae929	71acd8c2	76188d27	f9d97956	abdf6fa6	e6ae554d	1
+# Final Hash For Nonce 00000000: a0211662	f7bd6418	a75a03b7	af095d87	388c5baa	96b8ee29	ef9bba4d	0
+# Final Hash For Nonce 00000001: bfbb6ccd	267850ed	c535747a	24b76fa9	b025b71d	602a893f	8033d761	0
+# Final Hash For Nonce 00000002: da017047	33355d74	2ac5bed9	30fe5a0f	918119a8	23531d31	5b557fff	0
+# Final Hash For Nonce 00000003: 1c34e2aa	5ae36864	2c78bc58	0e5bf6b1	bd702b14	d8b4ab61	f81bd372	1
+# Final Hash For Nonce 00000004: 58993aea	e5fb1fa7	83a1aaa0	84924c44	9c1f9898	f9f870ac	ccef822b	0
+# Final Hash For Nonce 00000005: b41b7a67	cd0765fa	ab79514b	6c84514c	313600aa	a81d63b8	1f1ab9e0	1
+# Final Hash For Nonce 00000006: 04cf2ceb	b0e23fa6	6f47f78a	9ea5376a	28278c2a	17b29ada	a65be3ab	0
+# Final Hash For Nonce 00000007: 85ab3945	828ec101	59abb02c	cc2cdceb	9d3d6f8a	19e00b2c	8fd9f7c3	1
+# Final Hash For Nonce 00000008: f4539616	511ec13e	42a5e5f0	e3264c5e	740e32e9	53298b87	f8b19bfe	1
+# Final Hash For Nonce 00000009: 0e4614d7	96043454	0a8cf05c	cba07d3c	01d1f281	fa2efc2a	f40b18a8	1
+# Final Hash For Nonce 0000000a: 6bec8208	e16982ec	2b3392b7	99851143	b60a282a	cbba1eca	95e748b7	1
+# Final Hash For Nonce 0000000b: ce75ecf2	96bf3df8	aec2ca8b	2943b958	f4363d57	b12add3f	4f9453b3	1
+# Final Hash For Nonce 0000000c: 672cb1a0	455f08a2	0f34254a	fcb74371	b48b9eaf	d4555ed8	a39ff414	1
+# Final Hash For Nonce 0000000d: 4d48232a	3da6c9d6	5f7f23a5	80377048	f926da98	04bcdad3	4a153e2a	1
+# Final Hash For Nonce 0000000e: cfe99db3	0c21d66b	1c280e43	94625553	809f554e	f9eb279f	beb06ca3	1
+# Final Hash For Nonce 0000000f: 047d81b9	2ef3cf5b	c2d05672	a3660cf9	f6463748	59927c25	adb9fd91	0
+# ---------------------
+# COMPARE HASH RESULTS:
+# ---------------------
+# Correct H0[ 0] = a0211662	Your H0[ 0] = a0211662
+# Correct H0[ 1] = bfbb6ccd	Your H0[ 1] = bfbb6ccd
+# Correct H0[ 2] = da017047	Your H0[ 2] = da017047
+# Correct H0[ 3] = 1c34e2aa	Your H0[ 3] = 1c34e2aa
+# Correct H0[ 4] = 58993aea	Your H0[ 4] = 58993aea
+# Correct H0[ 5] = b41b7a67	Your H0[ 5] = b41b7a67
+# Correct H0[ 6] = 04cf2ceb	Your H0[ 6] = 04cf2ceb
+# Correct H0[ 7] = 85ab3945	Your H0[ 7] = 85ab3945
+# Correct H0[ 8] = f4539616	Your H0[ 8] = f4539616
+# Correct H0[ 9] = 0e4614d7	Your H0[ 9] = 0e4614d7
+# Correct H0[10] = 6bec8208	Your H0[10] = 6bec8208
+# Correct H0[11] = ce75ecf2	Your H0[11] = ce75ecf2
+# Correct H0[12] = 672cb1a0	Your H0[12] = 672cb1a0
+# Correct H0[13] = 4d48232a	Your H0[13] = 4d48232a
+# Correct H0[14] = cfe99db3	Your H0[14] = cfe99db3
+# Correct H0[15] = 047d81b9	Your H0[15] = 047d81b9
+# ***************************
+# 
+# CONGRATULATIONS! All your hash results are correct!
+# 
+# Total number of cycles:         257
+# 
+# 
+# ***************************
+# 
+# ** Note: $stop    : H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash/tb_bitcoin_hash.sv(338)
+#    Time: 5190 ps  Iteration: 2  Instance: /tb_bitcoin_hash
+# Break in Module tb_bitcoin_hash at H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/bitcoin_hash/tb_bitcoin_hash.sv line 338

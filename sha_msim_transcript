@@ -1,0 +1,90 @@
+# Reading pref.tcl
+# do ECE111_finalproejct_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256 {H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256/simplified_sha256.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:11:36 on Dec 17,2023
+# vlog -reportprogress 300 -sv -work work "+incdir+H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256" H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256/simplified_sha256.sv 
+# -- Compiling module simplified_sha256
+# 
+# Top level modules:
+# 	simplified_sha256
+# End time: 04:11:39 on Dec 17,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256/tb_simplified_sha256_20w.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 04:13:09 on Dec 17,2023
+# vlog -reportprogress 300 -work work H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256/tb_simplified_sha256_20w.sv 
+# -- Compiling module tb_simplified_sha256
+# 
+# Top level modules:
+# 	tb_simplified_sha256
+# End time: 04:13:12 on Dec 17,2023, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 0
+vsim work.tb_simplified_sha256
+# vsim work.tb_simplified_sha256 
+# Start time: 04:13:38 on Dec 17,2023
+# Loading sv_std.std
+# Loading work.tb_simplified_sha256
+# Loading work.simplified_sha256
+run -all
+# --------
+# MESSAGE:
+# --------
+# 01234675
+# 02468cea
+# 048d19d4
+# 091a33a8
+# 12346750
+# 2468cea0
+# 48d19d40
+# 91a33a80
+# 23467501
+# 468cea02
+# 8d19d404
+# 1a33a809
+# 34675012
+# 68cea024
+# d19d4048
+# a33a8091
+# 46750123
+# 8cea0246
+# 19d4048d
+# 33a8091a
+# ***************************
+# 
+# ---------------------
+# COMPARE HASH RESULTS:
+# ---------------------
+# Correct H[0] = 5b8feb0a	Your H[0] = 5b8feb0a
+# Correct H[1] = d258a227	Your H[1] = d258a227
+# Correct H[2] = 116df790	Your H[2] = 116df790
+# Correct H[3] = 66c9d8cc	Your H[3] = 66c9d8cc
+# Correct H[4] = 47e75276	Your H[4] = 47e75276
+# Correct H[5] = a5316e2f	Your H[5] = a5316e2f
+# Correct H[6] = d1965a81	Your H[6] = d1965a81
+# Correct H[7] = 5904edff	Your H[7] = 5904edff
+# ***************************
+# 
+# CONGRATULATIONS! All your hash results are correct!
+# 
+# Total number of cycles:         214
+# 
+# 
+# ***************************
+# 
+# ** Note: $stop    : H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256/tb_simplified_sha256_20w.sv(231)
+#    Time: 4330 ps  Iteration: 2  Instance: /tb_simplified_sha256
+# Break in Module tb_simplified_sha256 at H:/Fall2023_final_project_SHA256_and_Bitcoin/Final_Project/Final_Project/simplified_sha256/tb_simplified_sha256_20w.sv line 231
+# End time: 04:19:15 on Dec 17,2023, Elapsed time: 0:05:37
+# Errors: 0, Warnings: 0
