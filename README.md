@@ -1,4 +1,4 @@
-# ECE 111 Final Project – Bitcoin Hashing using SHA-256
+# Bitcoin Hashing using SHA-256
 
 **Authors:** Sean Fuhrman and Nathaniel Greenberg  
 **Course:** ECE 111  
